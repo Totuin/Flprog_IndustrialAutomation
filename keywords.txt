@@ -1,0 +1,24 @@
+#######################################
+# Syntax Coloring Map
+#######################################
+#######################################
+# # Datatypes (KEYWORD1)
+#######################################
+FLProgHourMeter	KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+equipmentStatus	KEYWORD2
+hours	KEYWORD2
+minutes	KEYWORD2
+pool	KEYWORD2
+resetCounter	KEYWORD2
+seconds	KEYWORD2
+setCallBack	KEYWORD2
+setWorkSeconds	KEYWORD2
+workTimeAsSeconds	KEYWORD2
+
+#######################################
+# Constants (LITERAL1)
+#######################################

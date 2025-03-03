@@ -19,7 +19,7 @@ void FLProgHourMeter::pool()
     {
         return;
     }
-    if (!RT_HW_Base.getIsTimerUs(_startTime, 1000))
+    if (!RT_HW_Base.getIsTimerMs(_startTime, 1000))
     {
         return;
     }
@@ -47,7 +47,7 @@ void FLProgHourMeter::calculateSecondsMinutsHours()
     _callBack(_workSecondsCounter);
 }
 
-void FLProgHourMeter::setWrkSeconds(uint32_t value)
+void FLProgHourMeter::setWorkSeconds(uint32_t value)
 {
     _workSecondsCounter = value;
     calculateSecondsMinutsHours();

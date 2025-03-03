@@ -9,7 +9,7 @@ public:
     FLProgHourMeter() {};
 
     void equipmentStatus(bool status);
-    void setWrkSeconds(uint32_t value);
+    void setWorkSeconds(uint32_t value);
     void resetCounter();
     void setCallBack(FLProgHourMeterCallback func) { _callBack = func; };
     uint32_t workTimeAsSeconds() { return _workSecondsCounter; };
