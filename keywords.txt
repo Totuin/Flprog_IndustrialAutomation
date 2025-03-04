@@ -5,20 +5,41 @@
 # # Datatypes (KEYWORD1)
 #######################################
 FLProgHourMeter	KEYWORD1
+FLProgMotorBackupControl	KEYWORD1
+FLProgMotorControl	KEYWORD1
 
 #######################################
 # Methods and Functions (KEYWORD2)
 #######################################
+comand	KEYWORD2
 equipmentStatus	KEYWORD2
+externalError	KEYWORD2
+hasError	KEYWORD2
+hasRelayError	KEYWORD2
 hours	KEYWORD2
+hoursWorkedMotor	KEYWORD2
+isRun	KEYWORD2
 minutes	KEYWORD2
+mode	KEYWORD2
+motorIsRun	KEYWORD2
+motorNumber	KEYWORD2
+numberMotor	KEYWORD2
 pool	KEYWORD2
+readyMotor	KEYWORD2
+relayProtectionDelay	KEYWORD2
 resetCounter	KEYWORD2
+resetRelayProtection	KEYWORD2
+runMotorsCount	KEYWORD2
 seconds	KEYWORD2
 setCallBack	KEYWORD2
 setWorkSeconds	KEYWORD2
+useRelayProtection	KEYWORD2
+workStatus	KEYWORD2
 workTimeAsSeconds	KEYWORD2
 
 #######################################
 # Constants (LITERAL1)
 #######################################
+FLPROG_MOTOR_BACKUP_CONTROL_CAROUSEL_MODE	LITERAL1
+FLPROG_MOTOR_BACKUP_CONTROL_HOURS_WORKED_MODE	LITERAL1
+FLPROG_MOTOR_BACKUP_CONTROL_MANUAL_MODE	LITERAL1
