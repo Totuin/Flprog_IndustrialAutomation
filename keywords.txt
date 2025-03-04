@@ -4,6 +4,7 @@
 #######################################
 # # Datatypes (KEYWORD1)
 #######################################
+FLProgAnalogSignalControl	KEYWORD1
 FLProgHourMeter	KEYWORD1
 FLProgMotorBackupControl	KEYWORD1
 FLProgMotorControl	KEYWORD1
@@ -12,18 +13,28 @@ FLProgMotorControl	KEYWORD1
 # Methods and Functions (KEYWORD2)
 #######################################
 comand	KEYWORD2
+downErrorLevel	KEYWORD2
 equipmentStatus	KEYWORD2
 externalError	KEYWORD2
+hasDownError	KEYWORD2
 hasError	KEYWORD2
 hasRelayError	KEYWORD2
+hasUpError	KEYWORD2
 hours	KEYWORD2
 hoursWorkedMotor	KEYWORD2
+inputSacaleDown	KEYWORD2
+inputSacaleUp	KEYWORD2
+inputValue	KEYWORD2
+isReachedLevel	KEYWORD2
 isRun	KEYWORD2
 minutes	KEYWORD2
 mode	KEYWORD2
 motorIsRun	KEYWORD2
 motorNumber	KEYWORD2
 numberMotor	KEYWORD2
+outputSacaleDown	KEYWORD2
+outputSacaleUp	KEYWORD2
+outputValue	KEYWORD2
 pool	KEYWORD2
 readyMotor	KEYWORD2
 relayProtectionDelay	KEYWORD2
@@ -32,7 +43,9 @@ resetRelayProtection	KEYWORD2
 runMotorsCount	KEYWORD2
 seconds	KEYWORD2
 setCallBack	KEYWORD2
+setLevel	KEYWORD2
 setWorkSeconds	KEYWORD2
+upErrorLevel	KEYWORD2
 useRelayProtection	KEYWORD2
 workStatus	KEYWORD2
 workTimeAsSeconds	KEYWORD2
