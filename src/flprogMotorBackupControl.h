@@ -27,8 +27,12 @@ public:
 
     void runMotorsCount(uint8_t count);
     void mode(uint8_t value);
+    void pauseTime(uint32_t value);
+
     uint8_t motorNumber(uint8_t index);
     bool motorIsRun(uint8_t index);
+
+    void pool();
 
 
 protected:
@@ -45,4 +49,8 @@ protected:
     FLProgOneBacupMotor *_motors = 0;
     uint8_t _runMotorsCount = 0;
     uint8_t _firstMotorIndex = 0;
+    uint32_t _pauseTime = 0;
+    uint32_t _startPauseTime = 0;
+    uint8_t _initRunMotorsCount = 0;
+
 };

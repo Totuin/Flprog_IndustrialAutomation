@@ -5,6 +5,7 @@
 # # Datatypes (KEYWORD1)
 #######################################
 FLProgAnalogSignalControl	KEYWORD1
+FLProgDiscreteSignalsControl	KEYWORD1
 FLProgHourMeter	KEYWORD1
 FLProgMotorBackupControl	KEYWORD1
 FLProgMotorControl	KEYWORD1
@@ -13,9 +14,12 @@ FLProgMotorControl	KEYWORD1
 # Methods and Functions (KEYWORD2)
 #######################################
 comand	KEYWORD2
+controlLevelsCout	KEYWORD2
 downErrorLevel	KEYWORD2
 equipmentStatus	KEYWORD2
 externalError	KEYWORD2
+getLevel	KEYWORD2
+getLevelError	KEYWORD2
 hasDownError	KEYWORD2
 hasError	KEYWORD2
 hasRelayError	KEYWORD2

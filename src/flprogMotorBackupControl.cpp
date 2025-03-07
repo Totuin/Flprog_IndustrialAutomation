@@ -16,7 +16,7 @@ FLProgMotorBackupControl::FLProgMotorBackupControl(uint8_t motorsCount)
 
 FLProgOneBacupMotor *FLProgMotorBackupControl::motorAtIndex(uint8_t index)
 {
-    if (_motors == 0)
+    if (_motorsCount == 0)
     {
         return 0;
     }
@@ -169,13 +169,13 @@ bool FLProgMotorBackupControl::isNeedSwapMotor(uint8_t index)
 
 void FLProgMotorBackupControl::runMotorsCount(uint8_t count)
 {
-    if (_runMotorsCount == count)
+    if (_initRunMotorsCount == count)
     {
         return;
     }
     if (count == 0)
     {
-        if (_runMotorsCount > 0)
+        if (_initRunMotorsCount > 0)
         {
             if (_mode == FLPROG_MOTOR_BACKUP_CONTROL_HOURS_WORKED_MODE)
             {
@@ -189,7 +189,25 @@ void FLProgMotorBackupControl::runMotorsCount(uint8_t count)
             }
         }
     }
-    _runMotorsCount = count;
+    _initRunMotorsCount = count;
+    if ((_initRunMotorsCount == 0) || (_pauseTime == 0) || (_initRunMotorsCount < _runMotorsCount))
+    {
+        _runMotorsCount = _initRunMotorsCount;
+        checkIsRunMotors();
+        return;
+    }
+    if (_runMotorsCount == 0)
+    {
+        _runMotorsCount = 1;
+        _startPauseTime = millis();
+        checkIsRunMotors();
+        return;
+    }
+    if (RT_HW_Base.getIsTimerMs(_startPauseTime, _pauseTime))
+    {
+        _runMotorsCount++;
+        _startPauseTime = millis();
+    }
     checkIsRunMotors();
 }
 
@@ -242,4 +260,29 @@ bool FLProgMotorBackupControl::isReadyMotor(uint8_t index)
         return false;
     }
     return _motors[index].isReady;
+}
+
+void FLProgMotorBackupControl::pool()
+{
+    if (_runMotorsCount >= _initRunMotorsCount)
+    {
+        return;
+    }
+    if (_pauseTime == 0)
+    {
+        _runMotorsCount = _initRunMotorsCount;
+        return;
+    }
+    if (!RT_HW_Base.getIsTimerMs(_startPauseTime, _pauseTime))
+    {
+        return;
+    }
+    _startPauseTime = millis();
+    _runMotorsCount++;
+    checkIsRunMotors();
+}
+
+void FLProgMotorBackupControl::pauseTime(uint32_t value)
+{
+    _pauseTime = value;
 }
