@@ -98,7 +98,6 @@ void FLProgMotorBackupControl::updateMotorNumbers()
             break;
         }
     }
-
     if (_mode == FLPROG_MOTOR_BACKUP_CONTROL_CAROUSEL_MODE)
     {
         uint8_t readyCount = 0;
@@ -109,7 +108,7 @@ void FLProgMotorBackupControl::updateMotorNumbers()
                 readyCount++;
             }
         }
-        if (_firstMotorIndex > readyCount)
+        if (_firstMotorIndex >= readyCount)
         {
             _firstMotorIndex = 0;
         }
