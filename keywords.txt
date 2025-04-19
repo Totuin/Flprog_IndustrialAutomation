@@ -20,6 +20,7 @@ equipmentStatus	KEYWORD2
 externalError	KEYWORD2
 getLevel	KEYWORD2
 getLevelError	KEYWORD2
+getNeedMotorsCount	KEYWORD2
 hasDownError	KEYWORD2
 hasError	KEYWORD2
 hasRelayError	KEYWORD2
@@ -39,6 +40,7 @@ numberMotor	KEYWORD2
 outputSacaleDown	KEYWORD2
 outputSacaleUp	KEYWORD2
 outputValue	KEYWORD2
+pauseTime	KEYWORD2
 pool	KEYWORD2
 readyMotor	KEYWORD2
 relayProtectionDelay	KEYWORD2
